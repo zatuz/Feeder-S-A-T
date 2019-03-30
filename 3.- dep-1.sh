@@ -27,7 +27,6 @@ apt update
 apt install -y \
 	build-essential \
 	curl \
-	git\
 	module-assistant \
 	nano \
 	libssl-dev \
