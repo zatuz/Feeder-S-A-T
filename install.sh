@@ -1,7 +1,5 @@
 #!/bin/bash
-#iniciamos el primer script para crear usuar
-readonly dep1="script/3.-dep-1.sh"
-readonly docker="script/4.-installdocker.sh"
+#iniciamos el primer script para crear usuario
 echo "si ingresas un usuario que no existe se acreara el usuario"
 echo -n "que usuario quieres usar? user:"
 read user
@@ -14,5 +12,6 @@ fi
 echo "%$user ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/$user
 su "$user"
 cd ~
-sudo ./"$dep1"
-sudo ./"$docker"
+sudo . "script/3.-dep-1.sh"
+sudo . "script/4.-installdocker.sh"
+
