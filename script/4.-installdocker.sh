@@ -12,7 +12,14 @@ sudo add-apt-repository \
    stable" && 
 ## actualizo e instalo docker
 apt-get update 
-apt-get install -y docker-ce docker-ce-cli containerd.io
-
+apt-get install -y \
+	docker-ce \
+	docker-ce-cli \
+	containerd.io \
+	docker.io nodejs \
+	npm 
+pip install docker-compose==1.9.0
+pip install docker-py
+npm install npm --global
 ## se agrega $user a grupo docker
 usermod -aG docker "$VAR1"
