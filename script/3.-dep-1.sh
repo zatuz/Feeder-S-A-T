@@ -25,6 +25,7 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 # instalamos paquetes apt
 apt update
 apt install -y \
+    ansible \
 	build-essential \
 	curl \
 	module-assistant \
