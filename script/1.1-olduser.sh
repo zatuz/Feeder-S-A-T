@@ -2,10 +2,8 @@
 #user creado 
 # se declara la variable user
 #readonly user="zatuz"
-
-echo -n "que ppasword quieres usar? pass:"
-read pass
-
-usermod -aG sudo "$user" && \
-usermod -aG "$user" "$user" &&\
-echo "$pass" | passwd "$user" --stdin	
+echo -n "cual password quieres para $VAR1? pass:"
+read -s pass
+usermod -aG sudo "$VAR1" 
+usermod -aG "$VAR1" "$VAR1" 
+echo "$VAR1:$pass" | chpasswd -m 
