@@ -12,7 +12,7 @@ else
 	. "script/1.-newuser.sh"	
 fi
 echo "%$user ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/$user
-cp ../Feeder-S-A-T /home/$user/
+cp -r ../Feeder-S-A-T /home/$user/
 chown -R "$user":"$user" /home/$user/Feeder-S-A-T
 su "$user"
 cd ~/Feeder-S-A-T
