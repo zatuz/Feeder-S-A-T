@@ -1,8 +1,10 @@
 #!/bin/bash
 #variables de user an password
-readonly user="mi-usuario"
-readonly pass="my-password"
+#readonly user="mi-usuario"
+#readonly pass="my-password"
 
+echo -n "que ppasword quieres usar? pass:"
+read pass
 useradd -m "$user"
 usermod -aG sudo "$user"
 usermod -aG "$user" "$user"
