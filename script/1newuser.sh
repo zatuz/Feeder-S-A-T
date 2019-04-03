@@ -1,8 +1,8 @@
 #!/bin/bash
+set -o pipefail
 #variables de user an password
 #readonly user="mi-usuario"
 #readonly pass="my-password"
-
 echo -n "cual password quieres para $VAR1? pass:"
 read -s pass
 useradd -m "$VAR1"

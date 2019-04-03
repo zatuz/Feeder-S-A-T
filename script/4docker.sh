@@ -1,16 +1,25 @@
 #!/bin/bash
+sudo apt-get update
 ## instalamos lo requisitos etc
-apt-get install -y \
-		ca-certificates \
-		gnupg2
+sudo apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg2 \
+    software-properties-common
+## desistalamos paquetes docker anteriores
+sudo apt-get remove docker docker-engine docker.io containerd runc
 ## agregamos claves docker
-
+$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 ##agrego repositorios docker
-add-apt-repository \
-	"deb [arch=amd64] https://download.docker.com/linux/debian (lsb_release -cs) stable"
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable"
+## actualizamos
+ sudo apt-get update
 ## actualizo e instalo docker
-apt update
-apt-get install -y \
+sudo apt-get install -y \
 	docker-ce \
 	docker-ce-cli \
 	containerd.io \
