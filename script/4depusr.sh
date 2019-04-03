@@ -4,20 +4,26 @@ sudo apt-get update
 sudo apt-get install -y \
     apt-transport-https \
     ca-certificates \
-    curl \
     gnupg2 \
-    software-properties-common
+# instalamos paquetes apt
+sudo apt update
+sudo apt install -y \
+  ansible \
+	build-essential \
+	module-assistant \
+	nano \
+	libssl-dev \
+  libffi-dev \
+  python3-dev \
+  python3-pip \
+  python-dev \
+  python-pip
+sudo m-a prepare
+sudo apt upgrade -y
 ## desistalamos paquetes docker anteriores
 sudo apt-get remove docker docker-engine docker.io containerd runc
-## agregamos claves docker
-$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-##agrego repositorios docker
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/debian \
-   $(lsb_release -cs) \
-   stable"
 ## actualizamos
- sudo apt-get update
+sudo apt-get update
 ## actualizo e instalo docker
 sudo apt-get install -y \
 	docker-ce \
@@ -30,4 +36,4 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 pip install docker-py
 npm install npm --global
 ## se agrega $user a grupo docker
-usermod -aG docker "$VAR1"
+sudo usermod -aG docker "$VAR1"
