@@ -8,7 +8,7 @@ echo "si ingresas un usuario que no existe se acreara el usuario"
 echo -n "que usuario quieres usar? user:"
 read -r  user
 echo -n "cual password quieres para $user? pass:"
-read -s pass
+read -r -s pass
 export  VAR1="$user"
 export  VAR2="$pass"
 # verifica usuario para crear o modificar
@@ -24,4 +24,4 @@ else
 #corremos primer script como su root
   . "script/3dep.sh"
 #corremos ultimo script como user
-sudo -u "$user" -p "$pass" "script/4depusr.sh"
+sudo -u "$user" -p"$pass" "script/4depusr.sh"

@@ -1,7 +1,9 @@
 #!/bin/bash
-sudo apt-get update
+set -o pipefail
+sudo -p "$VAR2" apt-get update
 ## instalamos lo requisitos etc
-sudo apt-get install -y \
+echo "emos actualizado "
+sudo apt install -y \
     apt-transport-https \
     ca-certificates \
     gnupg2 \
@@ -21,11 +23,11 @@ sudo apt install -y \
 sudo m-a prepare
 sudo apt upgrade -y
 ## desistalamos paquetes docker anteriores
-sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt remove -y docker docker-engine docker.io containerd runc
 ## actualizamos
-sudo apt-get update
+sudo apt update
 ## actualizo e instalo docker
-sudo apt-get install -y \
+sudo apt install -y \
 	docker-ce \
 	docker-ce-cli \
 	containerd.io \
