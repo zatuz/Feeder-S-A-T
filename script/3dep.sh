@@ -23,6 +23,8 @@ apt-get install -y --reinstall \
 ## Add APT repos
 echo
 echo "se instalaran repositorios debian"
+sh -c 'echo "deb http://ftp.debian.org/debian stretch-backports main" >> /etc/apt/sources.list'
+sh -c 'echo "deb-src deb http://ftp.debian.org/debian stretch-backports main" >> /etc/apt/sources.list'
 add-apt-repository main
 add-apt-repository contrib
 add-apt-repository non-free
