@@ -1,6 +1,6 @@
 #!/bin/bash
 set -o pipefail
-sudo -p "$VAR2" apt-get update
+echo "$VAR2" | sudo -p apt-get update 
 ## instalamos lo requisitos etc
 echo "emos actualizado "
 sudo apt install -y \
