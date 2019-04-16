@@ -23,8 +23,12 @@ apt-get install -y --reinstall \
 ## Add APT repos
 echo
 echo "se instalaran repositorios debian"
-sh -c 'echo "deb http://ftp.debian.org/debian stretch-backports main" >> /etc/apt/sources.list'
-sh -c 'echo "deb-src http://ftp.debian.org/debian stretch-backports main" >> /etc/apt/sources.list'
+if [ -f  /etc/apt/sources.list ]; then
+    grep -q -F 'deb http://ftp.debian.org/debian stretch-backports main' /etc/apt/sources.list || \
+        echo '#deb http://ftp.debian.org/debian stretch-backports main' >> /etc/apt/sources.list
+    grep -q -F 'deb-src http://ftp.debian.org/debian stretch-backports main' /etc/apt/sources.list || \
+        echo '#deb-src http://ftp.debian.org/debian stretch-backports main' >> /etc/apt/sources.list
+fi
 add-apt-repository main
 add-apt-repository contrib
 add-apt-repository non-free
@@ -43,8 +47,9 @@ add-apt-repository \
    $(lsb_release -cs) \
    stable"
 ##repositorios para node js y npm
-echo 
+echo
 echo "instalando repo nodejs"
 curl -sL https://deb.nodesource.com/setup_11.x | bash -
-
-apt update
+apt update && \
+apt upgrade -y && \
+apt dist-upgrade -y
