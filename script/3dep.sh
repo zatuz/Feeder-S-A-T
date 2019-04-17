@@ -50,6 +50,4 @@ add-apt-repository \
 echo
 echo "instalando repo nodejs"
 curl -sL https://deb.nodesource.com/setup_11.x | bash -
-apt update && \
-apt upgrade -y && \
-apt dist-upgrade -y
+apt update && apt upgrade -y && apt dist-upgrade -y
