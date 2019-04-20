@@ -1,3 +1,5 @@
+#!/bin/bash
+set -o pipefail
 ##repositorios para node js y npm
 echo
 echo "instalando repo nodejs"
