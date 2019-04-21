@@ -46,6 +46,8 @@ echo "instalando los repocitorios oficiales"
 echo
 echo "instalando los repocitorios oficiales de docker"
 . "script/repdock.sh"
+#corremos script ansible reposit
+. "script/repansible.sh"
 #iniciamos repnode.sh
 . "script/repnode.sh"
 #corremos ultimo script como user
