@@ -16,9 +16,10 @@ echo
 echo "se instalaran paquetes necesarios"
 apt update
 apt-get install -y --reinstall \
+  		software-properties-common
+apt-get install -y
 		apt-transport-https \
 		dirmngr \
-		software-properties-common \
         curl \
         ca-certificates \
         gnupg2
