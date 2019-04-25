@@ -17,7 +17,7 @@ echo "se instalaran paquetes necesarios"
 apt update
 apt-get install -y --reinstall \
   		software-properties-common
-apt-get install -y
+apt-get install -y \
 		apt-transport-https \
 		dirmngr \
         curl \
