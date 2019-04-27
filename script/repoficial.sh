@@ -10,4 +10,3 @@ if [ -f  /etc/apt/sources.list ]; then
     grep -q -F 'deb-src http://ftp.debian.org/debian stretch-backports main' /etc/apt/sources.list || \
         echo '#deb-src http://ftp.debian.org/debian stretch-backports main contrib non-free' >> /etc/apt/sources.list
 fi
-reset

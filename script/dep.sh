@@ -23,3 +23,6 @@ apt-get install -y \
         curl \
         ca-certificates \
         gnupg2
+
+apt upgrade -y
+apt dist-upgrade -y

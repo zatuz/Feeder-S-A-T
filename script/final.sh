@@ -5,6 +5,11 @@ echo "$VAR2" | sudo -p apt-get update
 echo "emos actualizado "
 ## instalamos programas requeridos y finales y etc
 # instalamos paquetes apt
+echo -E "###########################################################################"
+echo -E "#      procedere con la instalacion de librerias python etc               #"
+echo -E "#esto puede tardar algo no me molestes por favor solo soy un simple script#"
+echo -E "###########################################################################"
+sleep 4
 sudo apt update
 sudo apt install -y \
   ansible \
@@ -18,8 +23,12 @@ sudo apt install -y \
   python-pip
 m-a prepare
 ## actualizo e instalo docker
-echo
-echo "se instala docker nodejs y npm"
+echo -E "#############################################################################"
+echo -E "#             procedere con la instalacion de docker y nodejs               #"
+echo -E "#               aun nose como piensa mi programador,                        #"
+echo -E "#         sin embargo tengo fe en el pronto sera grande ya veras            #"
+echo -E "#############################################################################"
+sleep 4
 sudo apt install -y \
 	docker-ce \
 	docker-ce-cli \
