@@ -1,10 +1,11 @@
 #!/bin/bash
 set -o pipefail
-echo "$VAR2" | sudo -p apt-get update
 ## instalamos lo requisitos etc
-echo "emos actualizado "
+echo "actualizare los repositorios "
+sleep 4
 ## instalamos programas requeridos y finales y etc
 # instalamos paquetes apt
+sudo apt update
 echo -E "###########################################################################"
 echo -E "#      procedere con la instalacion de librerias python etc               #"
 echo -E "#esto puede tardar algo no me molestes por favor solo soy un simple script#"
