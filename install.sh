@@ -44,7 +44,16 @@ else
             exit
         fi
  fi
-
+sleep 3
+#corremos el primer script de dependencias primarias como root
+echo
+echo "instalando las dependencias primarias"
+. "script/dep.sh"
+#corremos el segundo script de repositorios oficiales como root
+echo
+echo "instalando los repocitorios oficiales"
+. "script/repoficial.sh"
+#configuramos la zona horaria
 echo "para algunos programas o contenedores utilizan la zona horaria"
 echo "tu zona horaria actual es $(date)"
 echo "segun la zona horaria que deverias manejar es $(curl http://ip-api.com/line?fields=timezone)"
@@ -60,14 +69,6 @@ elif [ "$TIEMPO" == "n" ]; then
     echo "continuamos"
 fi
 sleep 2
-#corremos el primer script de dependencias primarias como root
-echo
-echo "instalando las dependencias primarias"
-. "script/dep.sh"
-#corremos el segundo script de repositorios oficiales como root
-echo
-echo "instalando los repocitorios oficiales"
-. "script/repoficial.sh"
 # corremos el 3er script de docker
 echo
 echo "instalando los repocitorios oficiales de docker"
