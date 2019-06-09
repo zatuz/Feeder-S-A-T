@@ -22,8 +22,8 @@ sudo apt install -y \
   python3-pip \
   python-dev \
   python-pip
-m-a prepare
-## actualizo e instalo docker
+htop  
+  ## actualizo e instalo docker
 echo -E "#############################################################################"
 echo -E "#             procedere con la instalacion de docker y nodejs               #"
 echo -E "#               aun nose como piensa mi programador,                        #"
