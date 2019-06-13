@@ -1,6 +1,5 @@
 #!/bin/bash
 set -o pipefail  
-apt install -y git curl zsh unzip zip || exit
 usermod -aG sudo "$VAR1"         #agrega usuario existente a sudo
 usermod -aG "$VAR1" "$VAR1"      #agrega usuario a su grupo
 echo "$VAR1:$VAR2" | chpasswd -m #cambia password
