@@ -21,7 +21,7 @@ sudo apt install -y \
   python3-dev \
   python3-pip \
   python-dev \
-  python-pip
+  python-pip \
 htop  
   ## actualizo e instalo docker
 echo -E "#############################################################################"
