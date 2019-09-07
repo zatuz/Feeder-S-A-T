@@ -14,7 +14,7 @@ read -r TIEMPO
 if [ "$TIEMPO" == "y" ]; then
     echo "de acuerdo as aceptado que modifiquemos la zona horaria"
     echo "en unos momentos tendras tu zona horaria correcta"
-    timedatectl set-timezone $(curl http://ip-api.com/line?fields=timezone)
+    timedatectl set-timezone "$(curl -sS http://ip-api.com/line?fields=timezone)"
 
 elif [ "$TIEMPO" == "n" ]; then
     echo "bien tu mandas yo solo soy un script que intenta ayudar"
