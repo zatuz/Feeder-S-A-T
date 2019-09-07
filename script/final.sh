@@ -33,6 +33,6 @@ sleep 4
 sudo apt install -y \
 	docker-ce \
 	docker-ce-cli \
-	containerd.io \
+	containerd.io 
 pip install docker-py
 sudo npm install npm --global
