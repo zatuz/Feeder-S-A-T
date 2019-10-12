@@ -9,7 +9,7 @@ apt remove -y docker \
 apt update
 echo
 echo "se instala repo docker"
-if grep -qi 'download.docker.com': /etc/apt/sources.list; then
+if [ ! -d /etc/apt/sources.list.d/docker.list ]; then
        echo "hola ya tienes contenedores docker "
 else
     echo "pasaremos a inestalar repositorios docker"
