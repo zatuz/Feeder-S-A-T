@@ -1,7 +1,7 @@
 #!/bin/bash
 set -o pipefail
 ## dependencia para ansible
-if [ -f  /etc/apt/sources.list.d/ansible.list ]; then
+if [ -e  /etc/apt/sources.list.d/ansible.list ]; then
    echo "tenemos ansible"
 else
     echo "instalando ansible"
