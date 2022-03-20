@@ -9,8 +9,8 @@ apt remove -y docker \
 apt update
 echo
 echo "se instala repo docker"
-if grep -qi 'https://download.docker.com/linux/debian' /etc/apt/sources.list.d/docker.list; then
-       echo "hola ya tienes contenedores docker "
+if [ -f /etc/apt/sources.list.d/docker.list ] && grep -qi 'https://download.docker.com/linux/debian' /etc/apt/sources.list.d/docker.list; then
+       echo "hola ya tienes repositorios docker instalado "
 else
     echo "pasaremos a inestalar repositorios docker"
     curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
