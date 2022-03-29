@@ -6,6 +6,6 @@ if [ -f /etc/apt/sources.list.d/nodesource.list ] && grep -qi 'deb.nodesource.co
 else 
   echo
   echo "instalando repo nodejs"
-  curl -sL https://deb.nodesource.com/setup_11.x | bash -
+  curl -sL https://deb.nodesource.com/setup_16.x | bash -
   apt-get install -y nodejs
 fi
